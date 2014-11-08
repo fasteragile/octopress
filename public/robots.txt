@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: 
 
-Sitemap: http://yoursite.com/sitemap.xml 
+Sitemap: https://still-castle-9796.herokuapp.com//sitemap.xml 
