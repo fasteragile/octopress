@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Javascript | FasterAgile Blog]]></title>
+  <link href="https://still-castle-9796.herokuapp.com//blog/categories/javascript/atom.xml" rel="self"/>
+  <link href="https://still-castle-9796.herokuapp.com//"/>
+  <updated>2015-01-19T17:34:20-06:00</updated>
+  <id>https://still-castle-9796.herokuapp.com//</id>
+  <author>
+    <name><![CDATA[FasterAgile]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Delegation and Turbolinks Gotchas]]></title>
+    <link href="https://still-castle-9796.herokuapp.com//blog/2015/01/19/delegation-and-turbolinks-gotchas/"/>
+    <updated>2015-01-19T17:31:54-06:00</updated>
+    <id>https://still-castle-9796.herokuapp.com//blog/2015/01/19/delegation-and-turbolinks-gotchas</id>
+    <content type="html"><![CDATA[<p>When you bind a click through delegation on document, you can&rsquo;t do so inside
+a page:load turbolinks event or the observer will bind to the element for each
+turbolinks click event as you click through to your target element.</p>
+
+<p>Discuss why this happens</p>
+
+<p>Show an example with code and a video (gif maybe) showing the multiple post requests we were seeing on garnet hill</p>
+
+<p>Offer the solution</p>
+]]></content>
+  </entry>
+  
+</feed>

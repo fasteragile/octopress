@@ -4,7 +4,7 @@
   <title><![CDATA[FasterAgile Blog]]></title>
   <link href="https://still-castle-9796.herokuapp.com//atom.xml" rel="self"/>
   <link href="https://still-castle-9796.herokuapp.com//"/>
-  <updated>2014-11-08T15:26:52-06:00</updated>
+  <updated>2015-01-19T17:34:20-06:00</updated>
   <id>https://still-castle-9796.herokuapp.com//</id>
   <author>
     <name><![CDATA[FasterAgile]]></name>
@@ -12,5 +12,169 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Delegation and Turbolinks Gotchas]]></title>
+    <link href="https://still-castle-9796.herokuapp.com//blog/2015/01/19/delegation-and-turbolinks-gotchas/"/>
+    <updated>2015-01-19T17:31:54-06:00</updated>
+    <id>https://still-castle-9796.herokuapp.com//blog/2015/01/19/delegation-and-turbolinks-gotchas</id>
+    <content type="html"><![CDATA[<p>When you bind a click through delegation on document, you can&rsquo;t do so inside
+a page:load turbolinks event or the observer will bind to the element for each
+turbolinks click event as you click through to your target element.</p>
+
+<p>Discuss why this happens</p>
+
+<p>Show an example with code and a video (gif maybe) showing the multiple post requests we were seeing on garnet hill</p>
+
+<p>Offer the solution</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Encapsulating the DOM When Testing With Cucumber]]></title>
+    <link href="https://still-castle-9796.herokuapp.com//blog/2015/01/19/encapsulating-the-dom-when-testing-with-cucumber/"/>
+    <updated>2015-01-19T17:12:12-06:00</updated>
+    <id>https://still-castle-9796.herokuapp.com//blog/2015/01/19/encapsulating-the-dom-when-testing-with-cucumber</id>
+    <content type="html"><![CDATA[<p>State the problem</p>
+
+<p>Show an example</p>
+
+<p>Introduce the Site Prism gem as the solution</p>
+
+<p>Show a specific implementation in a code sample driving an earlier point home</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Declarative User Stories Translate to Good Cucumber Features]]></title>
+    <link href="https://still-castle-9796.herokuapp.com//blog/2015/01/19/declarative-user-stories-translate-to-good-cucumber-features/"/>
+    <updated>2015-01-19T15:58:19-06:00</updated>
+    <id>https://still-castle-9796.herokuapp.com//blog/2015/01/19/declarative-user-stories-translate-to-good-cucumber-features</id>
+    <content type="html"><![CDATA[<p>A lot of the FUD you read about Cucumber involves teams abandoning the tool
+because they think it adds a layer of extra work to the testing process.
+However, teams that go that route are missing a big benefit of plain text user
+stories: executable documentation <strong>that is readable by &ldquo;the business&rdquo;</strong>. The
+ultimate goal is to have the business (aka the stakeholders) actually
+collaborate on user stories so that a shared understanding of what needs to be
+built can be developed across the whole team.</p>
+
+<p>In order to achieve that goal, however, Cucumber scenaios need to be written in
+a certain way. They need to read as conversational requirements, not a QA test
+plan check list. This style of writing has a name: declarative.</p>
+
+<blockquote><p>&#8220;Possibly the most common sentence type in the English language, declarative<br/>sentences are used when you want to make a statement. Whether it&#8217;s a bold<br/>statement or a simple fact, the sole purpose of a declarative sentence is to<br/>give information. It always ends with a simple period. And if you&#8217;d like to see<br/>an example of a declarative sentence, you don&#8217;t need to look any further.<br/>Actually, every sentence in this paragraph is a declarative sentence.&#8221;</p><footer><strong>k12reader,</strong> <cite><a href='http://www.k12reader.com/declarative-sentences-are-the-most-common-type%E2%80%A6and-with-good-reason/'>www.k12reader.com/&hellip;</a></cite></footer></blockquote>
+
+
+<p>The most important part of that last paragraph is this: &ldquo;the sole purpose of
+a declarative sentence is to give information&rdquo;. This is why Cucumber is best
+suited to this style of writing. A user story&rsquo;s entire purpose is also to give
+information.</p>
+
+<p>Perhaps the easiest way to show a good user story style is by first showing an
+antipattern. Here is a user story written in an imperative style. If you have
+been using Cucumber for a long time, you might recgonize these steps as being
+matched by the <a href="http://aslakhellesoy.com/post/11055981222/the-training-wheels-came-off">now defunkt</a>
+<code>features/support/web_steps.rb</code> file.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='gherkin'><span class='line'><span class="k">Given </span><span class="nf">I am on the home page</span>
+</span><span class='line'><span class="k">When </span><span class="nf">I fill in &quot;</span><span class="s">Username</span><span class="nf">&quot; with: &quot;</span><span class="s">jondkinney</span><span class="nf">&quot;</span>
+</span><span class='line'><span class="k">And </span><span class="nf">I fill in &quot;</span><span class="s">Password</span><span class="nf">&quot; with: &quot;</span><span class="s">SuperSecret123</span><span class="nf">&quot;</span>
+</span><span class='line'><span class="k">And </span><span class="nf">I check &quot;</span><span class="s">Remember me</span><span class="nf">&quot;</span>
+</span><span class='line'><span class="k">And </span><span class="nf">I press &quot;</span><span class="s">Log in</span><span class="nf">&quot;</span>
+</span><span class='line'><span class="k">Then </span><span class="nf">a user session should be persisted</span>
+</span><span class='line'><span class="k">And </span><span class="nf">I should be on my dashboard</span>
+</span><span class='line'><span class="k">And </span><span class="nf">I should see &quot;</span><span class="s">You have successfully logged in.</span><span class="nf">&quot;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Sometimes this style can be useful. It can help tease out an implementation
+detail that the only documented way to log in is clicking the &lsquo;Log in&rsquo; button,
+for instance. However, I think stories that are structured in a declarative
+method overall provide more value more of the time.</p>
+
+<p>A declarative version of the story above might read like this:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='gherkin'><span class='line'><span class="k">Given </span><span class="nf">I am on the home page </span>
+</span><span class='line'><span class="k">When </span><span class="nf">I login as an admin</span>
+</span><span class='line'><span class="k">Then </span><span class="nf">I should be on my dashboard </span>
+</span><span class='line'><span class="k">And </span><span class="nf">I should see &quot;</span><span class="s">You have successfully logged in.</span><span class="nf">&quot;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The implementation details are largely gone from the story, and it reads a lot
+better.</p>
+
+<p>Another example where an admin is merging two user accounts in an asset
+management system might read something like this:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='gherkin'><span class='line'><span class="k">Given </span><span class="nf">two users with matching addresses and different spellings for full name</span>
+</span><span class='line'><span class="k">When </span><span class="nf">I edit one of the user names to match the other and submit the form</span>
+</span><span class='line'><span class="k">Then </span><span class="nf">the assets for both user records should exist under a single user </span>
+</span><span class='line'><span class="k">And </span><span class="nf">the duplicate user record should no longer exist</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Here&rsquo;s another shorter example:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='gherkin'><span class='line'><span class="k">Given </span><span class="nf">I am logged in as an admin </span>
+</span><span class='line'><span class="k">When </span><span class="nf">I unlock a user account</span>
+</span><span class='line'><span class="k">Then </span><span class="nf">the user should receive an email with a link to reset their password</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Other resources on declarative user stories</h2>
+
+<p>This style isn&rsquo;t a new idea anymore. However, many of the teams we work with
+still fall into the imperative trap when a deadline looms or it&rsquo;s unclear how to
+extract several steps into a more declarative one. For some more inspiration on
+the subject, take a look at a few posts from other experts on testing and BDD.</p>
+
+<ul>
+<li><a href="http://benmabey.com/2008/05/19/imperative-vs-declarative-scenarios-in-user-stories.html">Imperative vs declarative scenarios in user stories</a></li>
+<li><a href="http://itsadeliverything.com/declarative-vs-imperative-gherkin-scenarios-for-cucumber">Declarative vs imperative gherkin scenarios for cucumber</a></li>
+</ul>
+
+
+<p>And from the author of cucumber itself: <a href="http://aslakhellesoy.com/post/11055981222/the-training-wheels-came-off">The training wheels came off</a></p>
+
+<p>We&rsquo;ve had good luck with this more declarative style at Faster Agile.
+Stakeholders can better read and understand the requirements in a user story,
+and with this conversational and plain language tool to describe how the system
+is supposed to work, they also help write the stories more often too!</p>
+
+<h2>Taking it a step further</h2>
+
+<p>After conquering the verbosity and repetativeness of imperative stories,
+there&rsquo;s still a nagging issue with the resulting step defintions. Using bare
+capybara as the underlying mechanism to interact with the DOM can lead to
+mutliple ways of targeting elements to fill-in and click. Even if a project
+tries to standardize on targeting <em>only</em> IDs or <em>only</em> label text, that code is
+still repeated in many places leading to a brittle test suite that is locked
+pretty heavily to the existing ID/class structure and/or label text.</p>
+
+<p>In our next post, we&rsquo;ll show how Faster Agile uses the Site Prism gem and the
+concept of &ldquo;page objects&rdquo; to encapsulate the DOM for any given page making it
+much easier to keep a Cucumber suite more decoupled from the DOM it&rsquo;s driving.</p>
+]]></content>
+  </entry>
   
 </feed>

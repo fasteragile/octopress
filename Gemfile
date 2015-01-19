@@ -1,5 +1,8 @@
 source "https://rubygems.org"
 
+ruby '2.1.5'
+#ruby-gemset=fa_blog
+
 group :development do
   gem 'rake', '~> 10.0'
   gem 'jekyll', '~> 2.0'
