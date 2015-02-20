@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Javascript | FasterAgile Blog]]></title>
+  <title><![CDATA[Category: Javascript | <span class='dark-blue'>FASTER</span><span class='light-blue'>AGILE</span>]]></title>
   <link href="https://still-castle-9796.herokuapp.com//blog/categories/javascript/atom.xml" rel="self"/>
   <link href="https://still-castle-9796.herokuapp.com//"/>
-  <updated>2015-01-19T17:34:20-06:00</updated>
+  <updated>2015-02-20T15:58:54-06:00</updated>
   <id>https://still-castle-9796.herokuapp.com//</id>
   <author>
-    <name><![CDATA[FasterAgile]]></name>
+    <name><![CDATA[FASTERAGILE]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>

@@ -3,9 +3,9 @@
 # ----------------------- #
 
 url: https://still-castle-9796.herokuapp.com/
-title: FasterAgile Blog
-subtitle: Quick code, found fast
-author: FasterAgile
+title: <span class='dark-blue'>FASTER</span><span class='light-blue'>AGILE</span>
+subtitle:
+author: <span class='dark-blue'>FASTER</span><span class='light-blue'>AGILE</span>
 simple_search: https://www.google.com/search
 description:
 

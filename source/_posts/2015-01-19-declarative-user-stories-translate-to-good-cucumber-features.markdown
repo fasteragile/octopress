@@ -4,6 +4,7 @@ title: "Declarative user stories translate to good cucumber features"
 date: 2015-01-19 15:58:19 -0600
 comments: true
 categories: [Cucumber, Testing]
+author: Jon Kinney
 ---
 
 A lot of the FUD you read about Cucumber involves teams abandoning the tool

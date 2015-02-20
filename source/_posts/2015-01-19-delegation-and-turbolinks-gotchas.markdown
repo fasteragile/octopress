@@ -4,6 +4,7 @@ title: "Delegation and turbolinks gotchas"
 date: 2015-01-19 17:31:54 -0600
 comments: true
 categories: [JavaScript]
+author: Jon Kinney
 ---
 
 When you bind a click through delegation on document, you can't do so inside

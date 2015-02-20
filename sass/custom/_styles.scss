@@ -1,2 +1,20 @@
 // This File is imported last, and will override other styles in the cascade
 // Add styles here to make changes without digging in too much
+.dark-blue{
+  color: #4976c0;
+}
+.light-blue{
+  color: #76b4ee;
+}
+
+html{
+  background: none;
+}
+
+article, section, #content{
+  background: #fff;
+}
+
+#content article h1{
+  font-size: 1.5em !important;
+}
