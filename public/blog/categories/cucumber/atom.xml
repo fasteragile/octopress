@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Cucumber | <span class='dark-blue'>FASTER</span><span class='light-blue'>AGILE</span>]]></title>
+  <title><![CDATA[Category: Cucumber | FASTERAGILE]]></title>
   <link href="https://still-castle-9796.herokuapp.com//blog/categories/cucumber/atom.xml" rel="self"/>
   <link href="https://still-castle-9796.herokuapp.com//"/>
-  <updated>2015-02-20T15:58:54-06:00</updated>
+  <updated>2015-02-20T16:40:07-06:00</updated>
   <id>https://still-castle-9796.herokuapp.com//</id>
   <author>
     <name><![CDATA[FASTERAGILE]]></name>
@@ -59,13 +59,13 @@ matched by the <a href="http://aslakhellesoy.com/post/11055981222/the-training-w
 <code>features/support/web_steps.rb</code> file.</p>
 
 <pre><code class="gherkin">Given I am on the home page
-When I fill in "Username" with: "jondkinney"
-And I fill in "Password" with: "SuperSecret123"
-And I check "Remember me"
-And I press "Log in"
-Then a user session should be persisted
-And I should be on my dashboard
-And I should see "You have successfully logged in."
+ When I fill in "Username" with: "jondkinney"
+  And I fill in "Password" with: "SuperSecret123"
+  And I check "Remember me"
+  And I press "Log in"
+ Then a user session should be persisted
+  And I should be on my dashboard
+  And I should see "You have successfully logged in."
 </code></pre>
 
 <p>Sometimes this style can be useful. It can help tease out an implementation
@@ -76,9 +76,9 @@ method overall provide more value more of the time.</p>
 <p>A declarative version of the story above might read like this:</p>
 
 <pre><code class="gherkin">Given I am on the home page 
-When I login as an admin
-Then I should be on my dashboard 
-And I should see "You have successfully logged in."
+ When I login as an admin
+ Then I should be on my dashboard 
+  And I should see "You have successfully logged in."
 </code></pre>
 
 <p>The implementation details are largely gone from the story, and it reads a lot
@@ -88,16 +88,16 @@ better.</p>
 management system might read something like this:</p>
 
 <pre><code class="gherkin">Given two users with matching addresses and different spellings for full name
-When I edit one of the user names to match the other and submit the form
-Then the assets for both user records should exist under a single user 
-And the duplicate user record should no longer exist
+ When I edit one of the user names to match the other and submit the form
+ Then the assets for both user records should exist under a single user 
+  And the duplicate user record should no longer exist
 </code></pre>
 
 <p>Here&rsquo;s another shorter example:</p>
 
 <pre><code class="gherkin">Given I am logged in as an admin 
-When I unlock a user account
-Then the user should receive an email with a link to reset their password
+ When I unlock a user account
+ Then the user should receive an email with a link to reset their password
 </code></pre>
 
 <h2>Other resources on declarative user stories</h2>

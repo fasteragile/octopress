@@ -3,7 +3,8 @@
 # ----------------------- #
 
 url: https://still-castle-9796.herokuapp.com/
-title: <span class='dark-blue'>FASTER</span><span class='light-blue'>AGILE</span>
+branded_title: <span class='dark-blue'>FASTER</span><span class='light-blue'>AGILE</span>
+title: FASTERAGILE
 subtitle:
 author: <span class='dark-blue'>FASTER</span><span class='light-blue'>AGILE</span>
 simple_search: https://www.google.com/search

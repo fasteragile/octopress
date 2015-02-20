@@ -41,13 +41,13 @@ matched by the [now defunkt](http://aslakhellesoy.com/post/11055981222/the-train
 
 ```gherkin
 Given I am on the home page
-When I fill in "Username" with: "jondkinney"
-And I fill in "Password" with: "SuperSecret123"
-And I check "Remember me"
-And I press "Log in"
-Then a user session should be persisted
-And I should be on my dashboard
-And I should see "You have successfully logged in."
+ When I fill in "Username" with: "jondkinney"
+  And I fill in "Password" with: "SuperSecret123"
+  And I check "Remember me"
+  And I press "Log in"
+ Then a user session should be persisted
+  And I should be on my dashboard
+  And I should see "You have successfully logged in."
 ```
 
 Sometimes this style can be useful. It can help tease out an implementation
@@ -59,9 +59,9 @@ A declarative version of the story above might read like this:
 
 ```gherkin
 Given I am on the home page 
-When I login as an admin
-Then I should be on my dashboard 
-And I should see "You have successfully logged in."
+ When I login as an admin
+ Then I should be on my dashboard 
+  And I should see "You have successfully logged in."
 ```
 
 The implementation details are largely gone from the story, and it reads a lot
@@ -72,17 +72,17 @@ management system might read something like this:
 
 ```gherkin
 Given two users with matching addresses and different spellings for full name
-When I edit one of the user names to match the other and submit the form
-Then the assets for both user records should exist under a single user 
-And the duplicate user record should no longer exist
+ When I edit one of the user names to match the other and submit the form
+ Then the assets for both user records should exist under a single user 
+  And the duplicate user record should no longer exist
 ```
  
 Here's another shorter example:
 
 ```gherkin
 Given I am logged in as an admin 
-When I unlock a user account
-Then the user should receive an email with a link to reset their password
+ When I unlock a user account
+ Then the user should receive an email with a link to reset their password
 ```
 
 ## Other resources on declarative user stories

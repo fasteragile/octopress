@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title><span class='dark-blue'>FASTER</span><span class='light-blue'>AGILE</span></title>
+  <title>FASTERAGILE</title>
   <meta name="author" content="<span class='dark-blue'>FASTER</span><span class='light-blue'>AGILE</span>&#8221;>
 
   
@@ -22,7 +22,7 @@ a page:load turbolinks event or the observer will bind to the &hellip;">
   <link rel="canonical" href="https://still-castle-9796.herokuapp.com/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-  <link href="/atom.xml" rel="alternate" title="<span class='dark-blue'>FASTER</span><span class='light-blue'>AGILE</span>&#8221; type=&#8221;application/atom+xml&#8221;>
+  <link href="/atom.xml" rel="alternate" title="FASTERAGILE" type="application/atom+xml">
   <script src="/javascripts/modernizr-2.0.js"></script>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
@@ -193,13 +193,13 @@ matched by the <a href="http://aslakhellesoy.com/post/11055981222/the-training-w
 <span class='line-number'>7</span>
 <span class='line-number'>8</span>
 </pre></td><td class='code'><pre><code class='gherkin'><span class='line'><span class="k">Given </span><span class="nf">I am on the home page</span>
-</span><span class='line'><span class="k">When </span><span class="nf">I fill in &quot;</span><span class="s">Username</span><span class="nf">&quot; with: &quot;</span><span class="s">jondkinney</span><span class="nf">&quot;</span>
-</span><span class='line'><span class="k">And </span><span class="nf">I fill in &quot;</span><span class="s">Password</span><span class="nf">&quot; with: &quot;</span><span class="s">SuperSecret123</span><span class="nf">&quot;</span>
-</span><span class='line'><span class="k">And </span><span class="nf">I check &quot;</span><span class="s">Remember me</span><span class="nf">&quot;</span>
-</span><span class='line'><span class="k">And </span><span class="nf">I press &quot;</span><span class="s">Log in</span><span class="nf">&quot;</span>
-</span><span class='line'><span class="k">Then </span><span class="nf">a user session should be persisted</span>
-</span><span class='line'><span class="k">And </span><span class="nf">I should be on my dashboard</span>
-</span><span class='line'><span class="k">And </span><span class="nf">I should see &quot;</span><span class="s">You have successfully logged in.</span><span class="nf">&quot;</span>
+</span><span class='line'><span class="nf"> </span><span class="k">When </span><span class="nf">I fill in &quot;</span><span class="s">Username</span><span class="nf">&quot; with: &quot;</span><span class="s">jondkinney</span><span class="nf">&quot;</span>
+</span><span class='line'><span class="nf">  </span><span class="k">And </span><span class="nf">I fill in &quot;</span><span class="s">Password</span><span class="nf">&quot; with: &quot;</span><span class="s">SuperSecret123</span><span class="nf">&quot;</span>
+</span><span class='line'><span class="nf">  </span><span class="k">And </span><span class="nf">I check &quot;</span><span class="s">Remember me</span><span class="nf">&quot;</span>
+</span><span class='line'><span class="nf">  </span><span class="k">And </span><span class="nf">I press &quot;</span><span class="s">Log in</span><span class="nf">&quot;</span>
+</span><span class='line'><span class="nf"> </span><span class="k">Then </span><span class="nf">a user session should be persisted</span>
+</span><span class='line'><span class="nf">  </span><span class="k">And </span><span class="nf">I should be on my dashboard</span>
+</span><span class='line'><span class="nf">  </span><span class="k">And </span><span class="nf">I should see &quot;</span><span class="s">You have successfully logged in.</span><span class="nf">&quot;</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
@@ -215,9 +215,9 @@ method overall provide more value more of the time.</p>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
 </pre></td><td class='code'><pre><code class='gherkin'><span class='line'><span class="k">Given </span><span class="nf">I am on the home page </span>
-</span><span class='line'><span class="k">When </span><span class="nf">I login as an admin</span>
-</span><span class='line'><span class="k">Then </span><span class="nf">I should be on my dashboard </span>
-</span><span class='line'><span class="k">And </span><span class="nf">I should see &quot;</span><span class="s">You have successfully logged in.</span><span class="nf">&quot;</span>
+</span><span class='line'><span class="nf"> </span><span class="k">When </span><span class="nf">I login as an admin</span>
+</span><span class='line'><span class="nf"> </span><span class="k">Then </span><span class="nf">I should be on my dashboard </span>
+</span><span class='line'><span class="nf">  </span><span class="k">And </span><span class="nf">I should see &quot;</span><span class="s">You have successfully logged in.</span><span class="nf">&quot;</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
@@ -232,9 +232,9 @@ management system might read something like this:</p>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
 </pre></td><td class='code'><pre><code class='gherkin'><span class='line'><span class="k">Given </span><span class="nf">two users with matching addresses and different spellings for full name</span>
-</span><span class='line'><span class="k">When </span><span class="nf">I edit one of the user names to match the other and submit the form</span>
-</span><span class='line'><span class="k">Then </span><span class="nf">the assets for both user records should exist under a single user </span>
-</span><span class='line'><span class="k">And </span><span class="nf">the duplicate user record should no longer exist</span>
+</span><span class='line'><span class="nf"> </span><span class="k">When </span><span class="nf">I edit one of the user names to match the other and submit the form</span>
+</span><span class='line'><span class="nf"> </span><span class="k">Then </span><span class="nf">the assets for both user records should exist under a single user </span>
+</span><span class='line'><span class="nf">  </span><span class="k">And </span><span class="nf">the duplicate user record should no longer exist</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
@@ -244,8 +244,8 @@ management system might read something like this:</p>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 </pre></td><td class='code'><pre><code class='gherkin'><span class='line'><span class="k">Given </span><span class="nf">I am logged in as an admin </span>
-</span><span class='line'><span class="k">When </span><span class="nf">I unlock a user account</span>
-</span><span class='line'><span class="k">Then </span><span class="nf">the user should receive an email with a link to reset their password</span>
+</span><span class='line'><span class="nf"> </span><span class="k">When </span><span class="nf">I unlock a user account</span>
+</span><span class='line'><span class="nf"> </span><span class="k">Then </span><span class="nf">the user should receive an email with a link to reset their password</span>
 </span></code></pre></td></tr></table></div></figure>
 
 

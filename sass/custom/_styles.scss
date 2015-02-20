@@ -18,3 +18,14 @@ article, section, #content{
 #content article h1{
   font-size: 1.5em !important;
 }
+
+article blockquote {
+  $bq-margin: 1.1em;
+  font-size: 1.1em;
+  line-height: 1.25em;
+  padding-left: 1em;
+}
+
+ul{
+  margin-left: 2em;
+}
